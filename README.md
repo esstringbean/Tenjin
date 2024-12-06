@@ -3,7 +3,7 @@
 This repository contains the code bases of Tenjin. 
 
 
-[**Paper**]() | [**Model checkpoints and data**](https://huggingface.co/collections/OpenScholar/openscholar-v1-67376a89f6a80f448da411a6) | [**ScholarQABench**](https://github.com/AkariAsai/ScholarQABench/) | [**Expert Evaluation**](https://github.com/AkariAsai/OpenScholar_ExpertEval) | 
+| [**TenjinQABench**]((https://github.com/esstringbean/TenjinQABench)) | [**Expert Evaluation**] Coming Soon | 
  
 ### Table of contents
 1. [Overview of Tenjin](#overview-of-Tenjin)
@@ -31,8 +31,8 @@ This repository contains codes to run Tenjin inference.
 - [`retriever/`](retriever): Code base to run retrieval offline & host retrieval servers for online retrieval.  
 
 For automatic and human evaluations, please check the following repositories. 
-- To run evaluations on **ScholarQABench**, please check the [ScholarQABench](https://github.com/AkariAsai/ScholarQABench/) repository. 
-- For our human evaluation interfaces as well as the results, please check the [Tenjin_ExpertEval](https://github.com/AkariAsai/OpenScholar_ExpertEval) repository. 
+- To run evaluations on **TenjinQABench**, please check the [TenjinQABench](https://github.com/esstringbean/TenjinQABench/) repository. 
+- For our human evaluation interfaces as well as the results, this will be coming soon, please check the [Tenjin_ExpertEval] repository when pushed. 
 
 ## Installation 
 To run Tenjin inference, please ensure that all necessary libraries are installed. 
@@ -137,18 +137,18 @@ Below, we provide the detailed of configurations.
 - `task_name`: specify the task names when you run the single paper tasks. For SciFact, PubmedQA and QASA, the corresponding task names are `claim_full`, `boolean_question_full` and `single_qa`, respectively. 
 
 ## Training
-We train our [Tenjin-8B](https://huggingface.co/Tenjin/Tenjin_AX-3.1-8B) using our [Tenjin/OS_Train_Data]([https://huggingface.co/Tenjin/Tenjin_Train_Data](https://huggingface.co/datasets/Tenjin/OS_Train_Data)) data, which consists of 13k instruction-tuning data. We use our modified version of [torchtune]() to train our 8B model using 8*A100. 
+We train our [Tenjin-8B] using our [Tenjin/OS_Train_Data])data, which consists of 13k instruction-tuning data. We use our modified version of [torchtune]() to train our 8B model using 8*A100. 
 
 See mode detailed instructions for setting up the training in [train/](train)
 
 ## Run Retriever
-Both our peS2o v2 and v3 datastore (chunked text + index) are available: 
-- [Tenjin/Tenjin-DataStore-V2](https://huggingface.co/Tenjin/Tenjin-DataStore-V2)
-- [Tenjin/Tenjin-DataStore-V3](https://huggingface.co/Tenjin/Tenjin-DataStore-V3)
+Both our peS2o v2 and v3 datastore (chunked text + index) will be available soon: 
+- [Tenjin/Tenjin-DataStore-V2]
+- [Tenjin/Tenjin-DataStore-V3]
 
 See instructions under [retriever](retriever) to run the peS2o index locally. Note that due to the massive-scale of index (200+M embeddings based on 45 million papers), the peS2o retriever requires a lot of CPU memory. In our main experiments, we retrieved initial passages offline. 
 
-**We are planning to release our efficient sparse-dense retriever API endpoint used for the Tenjin Demo publicly via Semantic Scholar API to accelerate research for LLMs for scientific literature synthesis. Stay tune!!d!**
+**We are planning to release our efficient sparse-dense retriever API endpoint used for the Tenjin Demo publicly via Tenjin Kami API to accelerate research for LLMs for scientific literature synthesis. Stay tune!!d!**
 
 
 ## Contact and Citation
