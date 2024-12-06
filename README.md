@@ -3,7 +3,7 @@
 This repository contains the code bases of Tenjin. 
 
 
-| [**TenjinQABench**]((https://github.com/esstringbean/TenjinQABench)) | [**Expert Evaluation**] Coming Soon | 
+| [**TenjinQABench**]((https://github.com/esstringbean/TenjinQABench))        | [**Expert Evaluation**] Coming Soon   | 
  
 ### Table of contents
 1. [Overview of Tenjin](#overview-of-Tenjin)
@@ -51,7 +51,6 @@ Also please set the following API keys:
 ```sh
 export S2_API_KEY=YOUR_S2_API_KEY
 ```
-See instructions to acquire API keys at [Semantic Scholar API Page](https://www.semanticscholar.org/product/api). 
 
 If you want to also want to use web search engine, then sign up for you.com web API and set the key.
 ```sh
@@ -62,9 +61,7 @@ For information related to Tenjin training and retriever components, refer to th
 
 ## Run Tenjin inference
 
-By default, Tenjin takes retrieval results from off-line retrieval results after running the retrieval scripts in [retrieval/](retireval), followed by additional retrieval from Semantic Scholar Paper API and web search API results. See the script [src/use_search_apis.py](src/use_search_apis.py) to retrieve related passages offline using external APIs. 
-
-We released our retrieval results at [google drive](https://drive.google.com/drive/folders/1lOloYPOveKesD-37lD4Dlju96tc0XIm9?usp=sharing).  
+By default, Tenjin takes retrieval results from off-line retrieval results after running the retrieval scripts in [retrieval/](retireval), followed by additional retrieval from Tenjin Kami API and web search API results. 
 
 ### Use Open LMs (e.g., `AX-3.1_Tenjin-8B`) locally 
 - Run a Standard RAG pipeline using top 10 
